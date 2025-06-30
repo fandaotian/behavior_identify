@@ -185,7 +185,7 @@ def main(config):
     # 判断是否为实时摄像头模式
     is_camera = isinstance(config.input, int)
 
-    model = YOLO("yolov8l.pt")  # yolov8l, s, m, x
+    model = YOLO("yolov8n.pt")  # yolov8l, s, m, x
 
     # 修改 SlowFast 模型加载方式
     SLOWFAST_WEIGHTS_PATH = "SLOWFAST_8x8_R50_DETECTION.pyth"

@@ -10,9 +10,10 @@
               v-if="!isMonitoring" 
               type="primary" 
               @click="startMonitoring"
+              :loading="startingCamera"
             >
               <el-icon><VideoCamera /></el-icon>
-              开始监控
+              {{ startingCamera ? '启动中...' : '开始监控' }}
             </el-button>
             <el-button 
               v-else 
@@ -35,8 +36,8 @@
           <el-form-item label="视频源">
             <el-select v-model="monitorConfig.source" :disabled="isMonitoring">
               <el-option label="摄像头" value="camera" />
-              <el-option label="RTSP流" value="rtsp" />
-              <el-option label="本地文件" value="file" />
+              <el-option label="RTSP流" value="rtsp" disabled />
+              <el-option label="本地文件" value="file" disabled />
             </el-select>
           </el-form-item>
         </el-col>
@@ -44,8 +45,8 @@
         <el-col :span="6">
           <el-form-item label="检测模式">
             <el-select v-model="monitorConfig.mode" :disabled="isMonitoring">
-              <el-option label="实时检测" value="realtime" />
               <el-option label="仅预览" value="preview" />
+              <el-option label="实时检测" value="realtime" />
             </el-select>
           </el-form-item>
         </el-col>
@@ -91,6 +92,10 @@
                 <span v-if="isMonitoring" class="fps-indicator">
                   {{ currentFPS }} FPS
                 </span>
+                <span v-if="cameraError" class="error-indicator">
+                  <el-icon><Warning /></el-icon>
+                  摄像头错误
+                </span>
               </div>
             </div>
           </template>
@@ -99,13 +104,27 @@
             <div v-if="!isMonitoring" class="video-placeholder">
               <el-icon size="64"><VideoCamera /></el-icon>
               <p>点击开始监控</p>
+              <p class="placeholder-hint">将显示摄像头实时画面</p>
+            </div>
+            
+            <div v-else-if="cameraError" class="video-error">
+              <el-icon size="64"><Warning /></el-icon>
+              <p>摄像头访问失败</p>
+              <p class="error-message">{{ cameraError }}</p>
+              <el-button type="primary" @click="retryCamera">
+                重试
+              </el-button>
             </div>
             
             <div v-else class="video-display">
-              <canvas 
-                ref="videoCanvas" 
-                class="video-canvas"
-                @click="handleCanvasClick"
+              <video 
+                ref="videoElement" 
+                class="video-stream"
+                autoplay 
+                muted
+                playsinline
+                @loadedmetadata="onVideoLoaded"
+                @error="onVideoError"
               />
               
               <!-- 检测信息覆盖层 -->
@@ -118,6 +137,10 @@
                   <div class="info-item">
                     <span class="label">处理时间:</span>
                     <span class="value">{{ processingTime }}ms</span>
+                  </div>
+                  <div class="info-item">
+                    <span class="label">分辨率:</span>
+                    <span class="value">{{ videoResolution }}</span>
                   </div>
                 </div>
               </div>
@@ -207,6 +230,12 @@
               <span class="status-label">报警次数:</span>
               <span class="status-value">{{ realtimeAlerts.length }}</span>
             </div>
+            <div class="status-item">
+              <span class="status-label">摄像头状态:</span>
+              <span class="status-value" :class="cameraStatusClass">
+                {{ cameraStatusText }}
+              </span>
+            </div>
           </div>
         </el-card>
       </el-col>
@@ -238,6 +267,25 @@
             <el-checkbox label="exit">离开</el-checkbox>
           </el-checkbox-group>
         </el-form-item>
+        
+        <el-form-item label="摄像头设置">
+          <el-select v-model="settings.cameraId" placeholder="选择摄像头" :disabled="isMonitoring">
+            <el-option 
+              v-for="camera in availableCameras" 
+              :key="camera.deviceId"
+              :label="camera.label"
+              :value="camera.deviceId"
+            />
+          </el-select>
+        </el-form-item>
+        
+        <el-form-item label="视频质量">
+          <el-select v-model="settings.videoQuality" placeholder="选择视频质量" :disabled="isMonitoring">
+            <el-option label="低质量 (640x480)" value="low" />
+            <el-option label="中等质量 (1280x720)" value="medium" />
+            <el-option label="高质量 (1920x1080)" value="high" />
+          </el-select>
+        </el-form-item>
       </el-form>
       
       <template #footer>
@@ -249,11 +297,12 @@
 </template>
 
 <script>
-import { ref, reactive, onMounted, onUnmounted, nextTick } from 'vue'
+import { ref, reactive, onMounted, onUnmounted, nextTick, computed } from 'vue'
 import { ElMessage } from 'element-plus'
 import { 
   VideoCamera, VideoPause, Setting, Warning, User, Search, Check 
 } from '@element-plus/icons-vue'
+import { useRealtimeMonitor } from '@/composables/useRealtimeMonitor';
 
 export default {
   name: 'RealtimeMonitor',
@@ -261,8 +310,7 @@ export default {
     VideoCamera, VideoPause, Setting, Warning, User, Search, Check
   },
   setup() {
-    const videoCanvas = ref(null)
-    const isMonitoring = ref(false)
+    const videoElement = ref(null)
     const showSettings = ref(false)
     const currentFPS = ref(0)
     const processingTime = ref(0)
@@ -270,85 +318,159 @@ export default {
     const realtimeAlerts = ref([])
     const monitoringDuration = ref('00:00:00')
     const totalDetections = ref(0)
+    const availableCameras = ref([])
+    const videoResolution = ref('--')
     
     const monitorConfig = reactive({
       source: 'camera',
-      mode: 'realtime',
+      mode: 'preview', // 默认仅预览
       recording: false,
       alertEnabled: true
     })
     
     const settings = reactive({
       confidence: 0.5,
-      alertBehaviors: ['fall down', 'fight', 'enter', 'exit']
+      alertBehaviors: ['fall down', 'fight', 'enter', 'exit'],
+      cameraId: '',
+      videoQuality: 'medium'
     })
+
+    const { 
+      isMonitoring, 
+      startingCamera, 
+      cameraError,
+      videoResolution: composableVideoResolution,
+      startMonitoring: startCamera, 
+      stopMonitoring: stopCamera,
+      getErrorMessage
+    } = useRealtimeMonitor(videoElement, computed(() => settings));
     
     let websocket = null
     let monitoringStartTime = null
     let durationTimer = null
+    let animationFrameId = null
+
+    // 计算属性
+    const cameraStatusClass = computed(() => {
+      if (cameraError.value) return 'error'
+      if (isMonitoring.value) return 'success'
+      return 'info'
+    })
+
+    const cameraStatusText = computed(() => {
+      if (cameraError.value) return '错误'
+      if (isMonitoring.value) return '正常'
+      return '未启动'
+    })
+
+    // 获取可用摄像头列表
+    const getAvailableCameras = async () => {
+      try {
+        await navigator.mediaDevices.getUserMedia({ video: true }); // 请求权限以获取设备标签
+        const devices = await navigator.mediaDevices.enumerateDevices()
+        const videoDevices = devices.filter(device => device.kind === 'videoinput')
+        
+        availableCameras.value = videoDevices.map(device => ({
+          deviceId: device.deviceId,
+          label: device.label || `摄像头 ${availableCameras.value.length + 1}`
+        }))
+        
+        if (!settings.cameraId && availableCameras.value.length > 0) {
+          settings.cameraId = availableCameras.value[0].deviceId
+        }
+      } catch (error) {
+        console.error('获取摄像头列表失败:', error)
+        cameraError.value = getErrorMessage(error)
+      }
+    }
+
+    // 获取视频约束
+    const getVideoConstraints = () => {
+      const qualityMap = {
+        low: { width: { ideal: 640 }, height: { ideal: 480 } },
+        medium: { width: { ideal: 1280 }, height: { ideal: 720 } },
+        high: { width: { ideal: 1920 }, height: { ideal: 1080 } }
+      }
+      
+      const quality = qualityMap[settings.videoQuality] || qualityMap.medium
+      
+      return {
+        video: {
+          deviceId: settings.cameraId ? { exact: settings.cameraId } : undefined,
+          ...quality,
+          frameRate: { ideal: 30 }
+        }
+      }
+    }
 
     // 开始监控
     const startMonitoring = async () => {
-      try {
-        const response = await fetch('/api/detect/realtime', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({
-            source: monitorConfig.source,
-            mode: monitorConfig.mode,
-            config: settings
-          })
-        })
+      await startCamera();
+      if (isMonitoring.value) {
+        monitoringStartTime = new Date()
+        ElMessage.success('摄像头启动成功')
         
-        if (response.ok) {
-          isMonitoring.value = true
-          monitoringStartTime = new Date()
-          ElMessage.success('监控已启动')
-          
-          // 连接WebSocket
+        startDurationTimer()
+        updateFPS()
+        
+        if (monitorConfig.mode === 'realtime') {
           connectWebSocket()
-          
-          // 开始计时
-          startDurationTimer()
-          
-        } else {
-          ElMessage.error('启动监控失败')
         }
-      } catch (error) {
-        ElMessage.error('启动监控失败: ' + error.message)
       }
     }
 
     // 停止监控
     const stopMonitoring = async () => {
-      try {
-        const response = await fetch('/api/detect/realtime', {
-          method: 'DELETE'
-        })
-        
-        if (response.ok) {
-          isMonitoring.value = false
-          currentDetections.value = []
-          ElMessage.success('监控已停止')
-          
-          // 断开WebSocket
-          if (websocket) {
-            websocket.close()
-          }
-          
-          // 停止计时
-          if (durationTimer) {
-            clearInterval(durationTimer)
-          }
-          
-        } else {
-          ElMessage.error('停止监控失败')
-        }
-      } catch (error) {
-        ElMessage.error('停止监控失败: ' + error.message)
+      await stopCamera();
+      currentDetections.value = []
+      
+      if (websocket) {
+        websocket.close()
+        websocket = null
       }
+      
+      if (durationTimer) {
+        clearInterval(durationTimer)
+        durationTimer = null
+      }
+
+      if (animationFrameId) {
+        cancelAnimationFrame(animationFrameId)
+        animationFrameId = null
+      }
+      
+      ElMessage.success('监控已停止')
+    }
+
+    // 重试摄像头
+    const retryCamera = () => {
+      cameraError.value = ''
+      startMonitoring()
+    }
+
+    // 视频加载完成
+    const onVideoLoaded = () => {
+      // videoResolution is now handled by the composable
+    }
+
+    // 视频错误处理
+    const onVideoError = (event) => {
+      console.error('视频播放错误:', event.target.error)
+      cameraError.value = `视频播放失败: ${event.target.error.message}`
+    }
+
+    // FPS 计算
+    let lastFrameTime = performance.now()
+    let frameCounter = 0
+    const updateFPS = (now) => {
+      if (!isMonitoring.value) return
+      frameCounter++
+      if (now - lastFrameTime > 1000) {
+        currentFPS.value = Math.round(frameCounter / ((now - lastFrameTime) / 1000))
+        lastFrameTime = now
+        frameCounter = 0
+      }
+      animationFrameId = requestAnimationFrame(updateFPS)
     }
 
     // WebSocket连接
@@ -371,7 +493,6 @@ export default {
       switch (data.type) {
         case 'detection':
           currentDetections.value = data.detections || []
-          currentFPS.value = data.fps || 0
           processingTime.value = data.processingTime || 0
           totalDetections.value += data.detections?.length || 0
           break
@@ -391,28 +512,23 @@ export default {
         level: 'high'
       })
       
-      // 限制报警记录数量
       if (realtimeAlerts.value.length > 50) {
-        realtimeAlerts.value = realtimeAlerts.value.slice(0, 50)
+        realtimeAlerts.value.pop()
       }
     }
 
     // 开始计时
     const startDurationTimer = () => {
       durationTimer = setInterval(() => {
+        if (!monitoringStartTime) return
         const now = new Date()
         const diff = now - monitoringStartTime
         const hours = Math.floor(diff / 3600000)
         const minutes = Math.floor((diff % 3600000) / 60000)
         const seconds = Math.floor((diff % 60000) / 1000)
         
-        monitoringDuration.value = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`
+        monitoringDuration.value = `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`
       }, 1000)
-    }
-
-    // 画布点击处理
-    const handleCanvasClick = () => {
-      // 处理画布点击事件
     }
 
     // 保存设置
@@ -420,6 +536,12 @@ export default {
       localStorage.setItem('realtimeMonitorSettings', JSON.stringify(settings))
       ElMessage.success('设置已保存')
       showSettings.value = false
+      
+      if (isMonitoring.value) {
+        stopMonitoring().then(() => {
+          setTimeout(() => startMonitoring(), 100)
+        })
+      }
     }
 
     // 格式化时间
@@ -427,18 +549,24 @@ export default {
       return new Date(timestamp).toLocaleTimeString()
     }
 
+    onMounted(async () => {
+      const savedSettings = localStorage.getItem('realtimeMonitorSettings')
+      if (savedSettings) {
+        try {
+          Object.assign(settings, JSON.parse(savedSettings))
+        } catch (e) { console.error("Failed to parse settings", e) }
+      }
+      await getAvailableCameras()
+    })
+
     onUnmounted(() => {
-      if (websocket) {
-        websocket.close()
-      }
-      if (durationTimer) {
-        clearInterval(durationTimer)
-      }
+      stopMonitoring()
     })
 
     return {
-      videoCanvas,
+      videoElement,
       isMonitoring,
+      startingCamera,
       showSettings,
       currentFPS,
       processingTime,
@@ -446,11 +574,18 @@ export default {
       realtimeAlerts,
       monitoringDuration,
       totalDetections,
+      cameraError,
+      availableCameras,
+      videoResolution,
       monitorConfig,
       settings,
+      cameraStatusClass,
+      cameraStatusText,
       startMonitoring,
       stopMonitoring,
-      handleCanvasClick,
+      retryCamera,
+      onVideoLoaded,
+      onVideoError,
       saveSettings,
       formatTime
     }
@@ -508,6 +643,14 @@ export default {
   font-weight: bold;
 }
 
+.error-indicator {
+  font-size: 12px;
+  color: #f56c6c;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
 .video-container {
   height: 520px;
   position: relative;
@@ -530,15 +673,42 @@ export default {
   font-size: 16px;
 }
 
+.placeholder-hint {
+  font-size: 12px;
+  color: #c0c4cc;
+  margin-top: 8px !important;
+}
+
+.video-error {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #f56c6c;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.error-message {
+  font-size: 14px;
+  color: #909399;
+  margin: 8px 0 16px 0;
+  text-align: center;
+  max-width: 300px;
+  line-height: 1.5;
+}
+
 .video-display {
   height: 100%;
   position: relative;
 }
 
-.video-canvas {
+.video-stream {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  background: #000;
 }
 
 .detection-overlay {
@@ -669,5 +839,17 @@ export default {
   font-size: 12px;
   color: #303133;
   font-weight: bold;
+}
+
+.status-value.success {
+  color: #67c23a;
+}
+
+.status-value.error {
+  color: #f56c6c;
+}
+
+.status-value.info {
+  color: #909399;
 }
 </style> 

@@ -713,3 +713,1028 @@ with app.app_context(). See the documentation for more information.
 2025-06-29 12:06:47,131 - behavior_detection - INFO - app:serve_output_file:816 - 文件大小: 14989308 bytes
 2025-06-29 12:06:47,131 - behavior_detection - INFO - app:serve_output_file:821 - Range请求: bytes=8290304-
 2025-06-29 12:06:47,134 - behavior_detection - INFO - app:serve_output_file:853 - 返回Range响应: 8290304-14989307/14989308
+2025-06-30 09:41:01,229 - behavior_detection - INFO - app:upload_video:106 - 📥 收到视频上传请求
+2025-06-30 09:41:01,313 - behavior_detection - INFO - app:upload_video:107 - 📋 Form数据: {'confidence': '0.5', 'input_size': '640', 'device': 'cpu', 'output_format': 'both', 'alert_behaviors': '[]', 'save_results': 'true'}
+2025-06-30 09:41:01,315 - behavior_detection - INFO - app:upload_video:108 - 📁 文件列表: ['video']
+2025-06-30 09:41:01,333 - behavior_detection - INFO - app:upload_video:158 - 🔧 解析后的配置参数: {'confidence': 0.5, 'input_size': 640, 'device': 'cpu', 'output_format': 'both', 'alert_behaviors': [], 'save_results': True}
+2025-06-30 09:41:01,363 - behavior_detection - INFO - app:upload_video:173 - ✅ 视频上传成功: fall.mp4, 任务ID: 1
+2025-06-30 09:41:01,385 - behavior_detection - INFO - app:start_video_detection:194 - 📥 收到检测请求: {'task_id': 1, 'config': {'confidence': 0.5, 'input_size': 640, 'device': 'cpu', 'output_format': 'both', 'alert_behaviors': [], 'save_results': True}}
+2025-06-30 09:41:01,387 - behavior_detection - INFO - app:start_video_detection:199 - 🔧 检测配置参数: {'confidence': 0.5, 'input_size': 640, 'device': 'cpu', 'output_format': 'both', 'alert_behaviors': [], 'save_results': True}
+2025-06-30 09:41:01,405 - behavior_detection - INFO - app:start_video_detection:230 - 🔄 更新任务配置: confidence=0.5, input_size=640, device=cpu
+2025-06-30 09:41:01,430 - behavior_detection - INFO - app:detection_worker:253 - 🚀 开始检测任务 1
+2025-06-30 09:41:01,432 - behavior_detection - INFO - app:detection_worker:254 - 📁 源文件: d:\PyCharm 2024.2.4\PycharmProjects\behavior_identify\backend\uploads\1751247661_fall.mp4
+2025-06-30 09:41:01,434 - behavior_detection - INFO - app:detection_worker:255 - 📁 输出文件: d:\PyCharm 2024.2.4\PycharmProjects\behavior_identify\backend\outputs\result_1_1751247661.mp4
+2025-06-30 09:41:01,435 - behavior_detection - INFO - app:detection_worker:256 - 🔧 检测参数: device=cpu, input_size=640, confidence=0.5
+2025-06-30 09:41:01,442 - behavior_detection - INFO - app:detection_worker:281 - 🔧 最终检测配置: {'device': 'cpu', 'input_size': 640, 'confidence_threshold': 0.5, 'alert_behaviors': [], 'output_format': 'both', 'save_results': True}
+2025-06-30 09:43:20,225 - behavior_detection - INFO - app:serve_output_file:837 - 请求静态文件: result_1_1751247661.mp4
+2025-06-30 09:43:20,226 - behavior_detection - INFO - app:serve_output_file:844 - 文件路径: d:\PyCharm 2024.2.4\PycharmProjects\behavior_identify\backend\outputs\result_1_1751247661.mp4
+2025-06-30 09:43:20,227 - behavior_detection - INFO - app:serve_output_file:845 - 当前工作目录: D:\PyCharm 2024.2.4\PycharmProjects\behavior_identify
+2025-06-30 09:43:20,230 - behavior_detection - INFO - app:serve_output_file:846 - outputs目录: d:\PyCharm 2024.2.4\PycharmProjects\behavior_identify\backend\outputs
+2025-06-30 09:43:20,236 - behavior_detection - INFO - app:serve_output_file:847 - 文件存在: True
+2025-06-30 09:43:20,244 - behavior_detection - INFO - app:serve_output_file:855 - 文件大小: 14383108 bytes
+2025-06-30 09:43:20,247 - behavior_detection - INFO - app:serve_output_file:860 - Range请求: bytes=0-
+2025-06-30 09:43:20,269 - behavior_detection - INFO - app:serve_output_file:892 - 返回Range响应: 0-14383107/14383108
+2025-06-30 09:43:20,490 - behavior_detection - INFO - app:serve_output_file:837 - 请求静态文件: result_1_1751247661.mp4
+2025-06-30 09:43:20,490 - behavior_detection - INFO - app:serve_output_file:844 - 文件路径: d:\PyCharm 2024.2.4\PycharmProjects\behavior_identify\backend\outputs\result_1_1751247661.mp4
+2025-06-30 09:43:20,491 - behavior_detection - INFO - app:serve_output_file:845 - 当前工作目录: D:\PyCharm 2024.2.4\PycharmProjects\behavior_identify
+2025-06-30 09:43:20,491 - behavior_detection - INFO - app:serve_output_file:846 - outputs目录: d:\PyCharm 2024.2.4\PycharmProjects\behavior_identify\backend\outputs
+2025-06-30 09:43:20,491 - behavior_detection - INFO - app:serve_output_file:847 - 文件存在: True
+2025-06-30 09:43:20,492 - behavior_detection - INFO - app:serve_output_file:855 - 文件大小: 14383108 bytes
+2025-06-30 09:43:20,492 - behavior_detection - INFO - app:serve_output_file:860 - Range请求: bytes=14352384-
+2025-06-30 09:43:20,492 - behavior_detection - INFO - app:serve_output_file:892 - 返回Range响应: 14352384-14383107/14383108
+2025-06-30 09:43:20,497 - behavior_detection - INFO - app:serve_output_file:837 - 请求静态文件: result_1_1751247661.mp4
+2025-06-30 09:43:20,498 - behavior_detection - INFO - app:serve_output_file:844 - 文件路径: d:\PyCharm 2024.2.4\PycharmProjects\behavior_identify\backend\outputs\result_1_1751247661.mp4
+2025-06-30 09:43:20,498 - behavior_detection - INFO - app:serve_output_file:845 - 当前工作目录: D:\PyCharm 2024.2.4\PycharmProjects\behavior_identify
+2025-06-30 09:43:20,499 - behavior_detection - INFO - app:serve_output_file:846 - outputs目录: d:\PyCharm 2024.2.4\PycharmProjects\behavior_identify\backend\outputs
+2025-06-30 09:43:20,500 - behavior_detection - INFO - app:serve_output_file:847 - 文件存在: True
+2025-06-30 09:43:20,503 - behavior_detection - INFO - app:serve_output_file:855 - 文件大小: 14383108 bytes
+2025-06-30 09:43:20,505 - behavior_detection - INFO - app:serve_output_file:860 - Range请求: bytes=65536-
+2025-06-30 09:43:20,523 - behavior_detection - INFO - app:serve_output_file:892 - 返回Range响应: 65536-14383107/14383108
+2025-06-30 09:43:20,619 - behavior_detection - INFO - app:serve_output_file:837 - 请求静态文件: result_1_1751247661.mp4
+2025-06-30 09:43:20,620 - behavior_detection - INFO - app:serve_output_file:844 - 文件路径: d:\PyCharm 2024.2.4\PycharmProjects\behavior_identify\backend\outputs\result_1_1751247661.mp4
+2025-06-30 09:43:20,622 - behavior_detection - INFO - app:serve_output_file:845 - 当前工作目录: D:\PyCharm 2024.2.4\PycharmProjects\behavior_identify
+2025-06-30 09:43:20,624 - behavior_detection - INFO - app:serve_output_file:846 - outputs目录: d:\PyCharm 2024.2.4\PycharmProjects\behavior_identify\backend\outputs
+2025-06-30 09:43:20,625 - behavior_detection - INFO - app:serve_output_file:847 - 文件存在: True
+2025-06-30 09:43:20,627 - behavior_detection - INFO - app:serve_output_file:855 - 文件大小: 14383108 bytes
+2025-06-30 09:43:20,629 - behavior_detection - INFO - app:serve_output_file:860 - Range请求: bytes=8323072-
+2025-06-30 09:43:20,639 - behavior_detection - INFO - app:serve_output_file:892 - 返回Range响应: 8323072-14383107/14383108
+2025-06-30 09:43:20,665 - behavior_detection - INFO - app:serve_output_file:837 - 请求静态文件: result_1_1751247661.mp4
+2025-06-30 09:43:20,666 - behavior_detection - INFO - app:serve_output_file:844 - 文件路径: d:\PyCharm 2024.2.4\PycharmProjects\behavior_identify\backend\outputs\result_1_1751247661.mp4
+2025-06-30 09:43:20,667 - behavior_detection - INFO - app:serve_output_file:845 - 当前工作目录: D:\PyCharm 2024.2.4\PycharmProjects\behavior_identify
+2025-06-30 09:43:20,669 - behavior_detection - INFO - app:serve_output_file:846 - outputs目录: d:\PyCharm 2024.2.4\PycharmProjects\behavior_identify\backend\outputs
+2025-06-30 09:43:20,671 - behavior_detection - INFO - app:serve_output_file:847 - 文件存在: True
+2025-06-30 09:43:20,674 - behavior_detection - INFO - app:serve_output_file:855 - 文件大小: 14383108 bytes
+2025-06-30 09:43:20,677 - behavior_detection - INFO - app:serve_output_file:911 - 普通文件请求
+2025-06-30 09:43:20,681 - behavior_detection - INFO - app:serve_output_file:934 - 返回普通文件响应
+2025-06-30 09:43:23,022 - behavior_detection - INFO - app:serve_output_file:837 - 请求静态文件: result_1_1751247661.mp4
+2025-06-30 09:43:23,022 - behavior_detection - INFO - app:serve_output_file:844 - 文件路径: d:\PyCharm 2024.2.4\PycharmProjects\behavior_identify\backend\outputs\result_1_1751247661.mp4
+2025-06-30 09:43:23,024 - behavior_detection - INFO - app:serve_output_file:845 - 当前工作目录: D:\PyCharm 2024.2.4\PycharmProjects\behavior_identify
+2025-06-30 09:43:23,026 - behavior_detection - INFO - app:serve_output_file:846 - outputs目录: d:\PyCharm 2024.2.4\PycharmProjects\behavior_identify\backend\outputs
+2025-06-30 09:43:23,029 - behavior_detection - INFO - app:serve_output_file:847 - 文件存在: True
+2025-06-30 09:43:23,032 - behavior_detection - INFO - app:serve_output_file:855 - 文件大小: 14383108 bytes
+2025-06-30 09:43:23,033 - behavior_detection - INFO - app:serve_output_file:860 - Range请求: bytes=8814592-
+2025-06-30 09:43:23,041 - behavior_detection - INFO - app:serve_output_file:892 - 返回Range响应: 8814592-14383107/14383108
+2025-06-30 09:43:37,697 - behavior_detection - INFO - app:upload_video:106 - 📥 收到视频上传请求
+2025-06-30 09:43:37,772 - behavior_detection - INFO - app:upload_video:107 - 📋 Form数据: {'confidence': '0.5', 'input_size': '640', 'device': 'cuda', 'output_format': 'both', 'alert_behaviors': '["fall down","fight","enter"]', 'save_results': 'true'}
+2025-06-30 09:43:37,773 - behavior_detection - INFO - app:upload_video:108 - 📁 文件列表: ['video']
+2025-06-30 09:43:37,786 - behavior_detection - INFO - app:upload_video:158 - 🔧 解析后的配置参数: {'confidence': 0.5, 'input_size': 640, 'device': 'cuda', 'output_format': 'both', 'alert_behaviors': ['fall down', 'fight', 'enter'], 'save_results': True}
+2025-06-30 09:43:37,806 - behavior_detection - INFO - app:upload_video:173 - ✅ 视频上传成功: fall.mp4, 任务ID: 2
+2025-06-30 09:43:37,823 - behavior_detection - INFO - app:start_video_detection:194 - 📥 收到检测请求: {'task_id': 2, 'config': {'confidence': 0.5, 'input_size': 640, 'device': 'cuda', 'output_format': 'both', 'alert_behaviors': ['fall down', 'fight', 'enter'], 'save_results': True}}
+2025-06-30 09:43:37,825 - behavior_detection - INFO - app:start_video_detection:199 - 🔧 检测配置参数: {'confidence': 0.5, 'input_size': 640, 'device': 'cuda', 'output_format': 'both', 'alert_behaviors': ['fall down', 'fight', 'enter'], 'save_results': True}
+2025-06-30 09:43:37,834 - behavior_detection - INFO - app:start_video_detection:230 - 🔄 更新任务配置: confidence=0.5, input_size=640, device=cuda
+2025-06-30 09:43:37,857 - behavior_detection - INFO - app:detection_worker:253 - 🚀 开始检测任务 2
+2025-06-30 09:43:37,860 - behavior_detection - INFO - app:detection_worker:254 - 📁 源文件: d:\PyCharm 2024.2.4\PycharmProjects\behavior_identify\backend\uploads\1751247817_fall.mp4
+2025-06-30 09:43:37,861 - behavior_detection - INFO - app:detection_worker:255 - 📁 输出文件: d:\PyCharm 2024.2.4\PycharmProjects\behavior_identify\backend\outputs\result_2_1751247817.mp4
+2025-06-30 09:43:37,863 - behavior_detection - INFO - app:detection_worker:256 - 🔧 检测参数: device=cuda, input_size=640, confidence=0.5
+2025-06-30 09:43:37,868 - behavior_detection - INFO - app:detection_worker:281 - 🔧 最终检测配置: {'device': 'cuda', 'input_size': 640, 'confidence_threshold': 0.5, 'alert_behaviors': ['fall down', 'fight', 'enter'], 'output_format': 'both', 'save_results': True}
+2025-06-30 09:44:17,824 - behavior_detection - INFO - app:serve_output_file:837 - 请求静态文件: result_2_1751247817.mp4
+2025-06-30 09:44:17,825 - behavior_detection - INFO - app:serve_output_file:844 - 文件路径: d:\PyCharm 2024.2.4\PycharmProjects\behavior_identify\backend\outputs\result_2_1751247817.mp4
+2025-06-30 09:44:17,826 - behavior_detection - INFO - app:serve_output_file:845 - 当前工作目录: D:\PyCharm 2024.2.4\PycharmProjects\behavior_identify
+2025-06-30 09:44:17,827 - behavior_detection - INFO - app:serve_output_file:846 - outputs目录: d:\PyCharm 2024.2.4\PycharmProjects\behavior_identify\backend\outputs
+2025-06-30 09:44:17,828 - behavior_detection - INFO - app:serve_output_file:847 - 文件存在: True
+2025-06-30 09:44:17,828 - behavior_detection - INFO - app:serve_output_file:855 - 文件大小: 14373544 bytes
+2025-06-30 09:44:17,829 - behavior_detection - INFO - app:serve_output_file:860 - Range请求: bytes=0-
+2025-06-30 09:44:17,838 - behavior_detection - INFO - app:serve_output_file:892 - 返回Range响应: 0-14373543/14373544
+2025-06-30 09:44:18,159 - behavior_detection - INFO - app:serve_output_file:837 - 请求静态文件: result_2_1751247817.mp4
+2025-06-30 09:44:18,159 - behavior_detection - INFO - app:serve_output_file:844 - 文件路径: d:\PyCharm 2024.2.4\PycharmProjects\behavior_identify\backend\outputs\result_2_1751247817.mp4
+2025-06-30 09:44:18,159 - behavior_detection - INFO - app:serve_output_file:845 - 当前工作目录: D:\PyCharm 2024.2.4\PycharmProjects\behavior_identify
+2025-06-30 09:44:18,160 - behavior_detection - INFO - app:serve_output_file:846 - outputs目录: d:\PyCharm 2024.2.4\PycharmProjects\behavior_identify\backend\outputs
+2025-06-30 09:44:18,162 - behavior_detection - INFO - app:serve_output_file:847 - 文件存在: True
+2025-06-30 09:44:18,162 - behavior_detection - INFO - app:serve_output_file:855 - 文件大小: 14373544 bytes
+2025-06-30 09:44:18,163 - behavior_detection - INFO - app:serve_output_file:860 - Range请求: bytes=14352384-
+2025-06-30 09:44:18,164 - behavior_detection - INFO - app:serve_output_file:892 - 返回Range响应: 14352384-14373543/14373544
+2025-06-30 09:44:18,171 - behavior_detection - INFO - app:serve_output_file:837 - 请求静态文件: result_2_1751247817.mp4
+2025-06-30 09:44:18,171 - behavior_detection - INFO - app:serve_output_file:844 - 文件路径: d:\PyCharm 2024.2.4\PycharmProjects\behavior_identify\backend\outputs\result_2_1751247817.mp4
+2025-06-30 09:44:18,172 - behavior_detection - INFO - app:serve_output_file:845 - 当前工作目录: D:\PyCharm 2024.2.4\PycharmProjects\behavior_identify
+2025-06-30 09:44:18,173 - behavior_detection - INFO - app:serve_output_file:846 - outputs目录: d:\PyCharm 2024.2.4\PycharmProjects\behavior_identify\backend\outputs
+2025-06-30 09:44:18,174 - behavior_detection - INFO - app:serve_output_file:847 - 文件存在: True
+2025-06-30 09:44:18,174 - behavior_detection - INFO - app:serve_output_file:855 - 文件大小: 14373544 bytes
+2025-06-30 09:44:18,175 - behavior_detection - INFO - app:serve_output_file:911 - 普通文件请求
+2025-06-30 09:44:18,176 - behavior_detection - INFO - app:serve_output_file:934 - 返回普通文件响应
+2025-06-30 09:44:18,179 - behavior_detection - INFO - app:serve_output_file:837 - 请求静态文件: result_2_1751247817.mp4
+2025-06-30 09:44:18,180 - behavior_detection - INFO - app:serve_output_file:844 - 文件路径: d:\PyCharm 2024.2.4\PycharmProjects\behavior_identify\backend\outputs\result_2_1751247817.mp4
+2025-06-30 09:44:18,180 - behavior_detection - INFO - app:serve_output_file:845 - 当前工作目录: D:\PyCharm 2024.2.4\PycharmProjects\behavior_identify
+2025-06-30 09:44:18,181 - behavior_detection - INFO - app:serve_output_file:846 - outputs目录: d:\PyCharm 2024.2.4\PycharmProjects\behavior_identify\backend\outputs
+2025-06-30 09:44:18,181 - behavior_detection - INFO - app:serve_output_file:847 - 文件存在: True
+2025-06-30 09:44:18,182 - behavior_detection - INFO - app:serve_output_file:855 - 文件大小: 14373544 bytes
+2025-06-30 09:44:18,183 - behavior_detection - INFO - app:serve_output_file:860 - Range请求: bytes=98304-
+2025-06-30 09:44:18,192 - behavior_detection - INFO - app:serve_output_file:892 - 返回Range响应: 98304-14373543/14373544
+2025-06-30 09:44:18,426 - behavior_detection - INFO - app:serve_output_file:837 - 请求静态文件: result_2_1751247817.mp4
+2025-06-30 09:44:18,427 - behavior_detection - INFO - app:serve_output_file:844 - 文件路径: d:\PyCharm 2024.2.4\PycharmProjects\behavior_identify\backend\outputs\result_2_1751247817.mp4
+2025-06-30 09:44:18,427 - behavior_detection - INFO - app:serve_output_file:845 - 当前工作目录: D:\PyCharm 2024.2.4\PycharmProjects\behavior_identify
+2025-06-30 09:44:18,428 - behavior_detection - INFO - app:serve_output_file:846 - outputs目录: d:\PyCharm 2024.2.4\PycharmProjects\behavior_identify\backend\outputs
+2025-06-30 09:44:18,429 - behavior_detection - INFO - app:serve_output_file:847 - 文件存在: True
+2025-06-30 09:44:18,429 - behavior_detection - INFO - app:serve_output_file:855 - 文件大小: 14373544 bytes
+2025-06-30 09:44:18,430 - behavior_detection - INFO - app:serve_output_file:860 - Range请求: bytes=7438336-
+2025-06-30 09:44:18,433 - behavior_detection - INFO - app:serve_output_file:892 - 返回Range响应: 7438336-14373543/14373544
+2025-06-30 09:44:20,413 - behavior_detection - INFO - app:serve_output_file:837 - 请求静态文件: result_2_1751247817.mp4
+2025-06-30 09:44:20,414 - behavior_detection - INFO - app:serve_output_file:844 - 文件路径: d:\PyCharm 2024.2.4\PycharmProjects\behavior_identify\backend\outputs\result_2_1751247817.mp4
+2025-06-30 09:44:20,415 - behavior_detection - INFO - app:serve_output_file:845 - 当前工作目录: D:\PyCharm 2024.2.4\PycharmProjects\behavior_identify
+2025-06-30 09:44:20,417 - behavior_detection - INFO - app:serve_output_file:846 - outputs目录: d:\PyCharm 2024.2.4\PycharmProjects\behavior_identify\backend\outputs
+2025-06-30 09:44:20,418 - behavior_detection - INFO - app:serve_output_file:847 - 文件存在: True
+2025-06-30 09:44:20,421 - behavior_detection - INFO - app:serve_output_file:855 - 文件大小: 14373544 bytes
+2025-06-30 09:44:20,422 - behavior_detection - INFO - app:serve_output_file:860 - Range请求: bytes=8716288-
+2025-06-30 09:44:20,427 - behavior_detection - INFO - app:serve_output_file:892 - 返回Range响应: 8716288-14373543/14373544
+2025-06-30 10:25:04,629 - behavior_detection - INFO - app:start_realtime_detection:423 - 📥 收到实时检测请求: source=camera, mode=realtime
+2025-06-30 10:25:04,648 - behavior_detection - INFO - app:start_realtime_detection:450 - 🔧 检测配置: {'device': 'cuda', 'confidence_threshold': 0.5, 'input_size': 640, 'alert_behaviors': ['fall down', 'fight', 'enter', 'exit']}
+2025-06-30 10:25:26,589 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:26,715 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:26,837 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:26,961 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:27,085 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:27,212 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:27,339 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:27,502 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:27,675 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:27,831 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:28,021 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:28,186 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:28,391 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:28,584 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:28,772 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:28,951 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:29,117 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:29,300 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:29,509 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:29,686 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:29,874 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:30,078 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:30,272 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:30,459 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:30,634 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:30,822 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:30,995 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:31,164 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:31,342 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:31,531 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:31,707 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:31,886 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:32,058 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:32,231 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:32,414 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:32,603 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:32,767 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:32,943 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:33,109 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:33,273 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:33,447 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:33,663 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:33,857 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:34,038 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:34,208 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:34,392 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:34,560 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:34,743 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:34,918 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:35,106 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:35,290 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:35,489 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:35,658 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:35,939 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:36,223 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:36,385 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:36,554 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:36,726 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:36,912 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:37,095 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:37,271 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:37,356 - behavior_detection - INFO - app:start_realtime_detection:423 - 📥 收到实时检测请求: source=camera, mode=realtime
+2025-06-30 10:25:37,357 - behavior_detection - INFO - app:start_realtime_detection:450 - 🔧 检测配置: {'device': 'cuda', 'confidence_threshold': 0.5, 'input_size': 640, 'alert_behaviors': ['fall down', 'fight', 'enter', 'exit']}
+2025-06-30 10:25:37,460 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:37,675 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:37,836 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:38,033 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:38,241 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:38,438 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:38,630 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:38,799 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:38,981 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:39,155 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:39,347 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:39,535 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:39,708 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:39,875 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:40,063 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:40,266 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:40,475 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:40,639 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:40,809 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:40,996 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:41,170 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:41,347 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:41,518 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:41,687 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:41,913 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:42,076 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:42,249 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:42,435 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:42,613 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:42,799 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:42,980 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:43,182 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:43,333 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:43,486 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:43,664 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:43,852 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:44,030 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:44,222 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:44,391 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:44,574 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:44,763 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:44,943 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:45,123 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:45,303 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:45,494 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:45,718 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:45,898 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:46,080 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:46,250 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:46,439 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:46,604 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:46,787 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:46,966 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:47,149 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:47,318 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:47,516 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:47,702 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:47,867 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:48,060 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:48,250 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:48,421 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:48,597 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:48,761 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:48,952 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:49,146 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:49,325 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:49,500 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:49,677 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:49,880 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:50,103 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:50,270 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:50,455 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:50,633 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:50,789 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:50,954 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:51,111 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:51,292 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:51,455 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:51,624 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:51,780 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:51,980 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:52,172 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:52,336 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:52,519 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:52,680 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:52,837 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:53,048 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:53,225 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:53,417 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:53,606 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:53,782 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:54,005 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:25:54,259 - behavior_detection - INFO - app:stop_realtime_detection:497 - ✅ 实时检测已停止
+2025-06-30 10:26:12,361 - behavior_detection - INFO - app:start_realtime_detection:423 - 📥 收到实时检测请求: source=camera, mode=realtime
+2025-06-30 10:26:12,363 - behavior_detection - INFO - app:start_realtime_detection:450 - 🔧 检测配置: {'device': 'cuda', 'confidence_threshold': 0.5, 'input_size': 640, 'alert_behaviors': ['fall down', 'fight', 'enter', 'exit']}
+2025-06-30 10:27:25,002 - behavior_detection - INFO - app:stop_realtime_detection:497 - ✅ 实时检测已停止
+2025-06-30 10:27:46,183 - behavior_detection - INFO - app:start_realtime_detection:423 - 📥 收到实时检测请求: source=camera, mode=realtime
+2025-06-30 10:27:46,185 - behavior_detection - INFO - app:start_realtime_detection:450 - 🔧 检测配置: {'device': 'cuda', 'confidence_threshold': 0.5, 'input_size': 640, 'alert_behaviors': ['fall down', 'fight', 'enter', 'exit']}
+2025-06-30 10:28:03,245 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:03,388 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:03,531 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:03,665 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:03,811 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:03,950 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:04,082 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:04,226 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:04,360 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:04,503 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:04,644 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:04,785 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:04,924 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:05,070 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:05,216 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:05,364 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:05,545 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:05,692 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:05,843 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:05,980 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:06,123 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:06,265 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:06,420 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:06,579 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:06,726 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:06,868 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:07,010 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:07,147 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:07,285 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:07,429 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:07,571 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:07,717 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:07,870 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:08,022 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:08,163 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:08,306 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:08,463 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:08,613 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:08,846 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:08,991 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:09,134 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:09,278 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:09,433 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:09,582 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:09,743 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:09,892 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:10,037 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:10,190 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:10,328 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:10,481 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:10,632 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:10,903 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:11,181 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:11,324 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:11,477 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:11,614 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:11,756 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:11,893 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:12,032 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:12,177 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:12,321 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:12,467 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:12,615 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:12,754 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:12,895 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:13,038 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:13,323 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:13,594 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:13,736 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:13,874 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:14,014 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:14,152 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:14,296 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:14,449 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:14,584 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:14,730 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:14,869 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:15,013 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:15,159 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:15,307 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:15,507 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:15,796 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:15,949 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:16,086 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:16,230 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:16,367 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:16,508 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:16,648 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:16,784 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:16,930 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:17,078 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:17,216 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:17,356 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:17,504 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:17,640 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:17,856 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:18,004 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:18,255 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:18,403 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:18,547 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:18,697 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:18,842 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:18,996 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:19,142 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:19,293 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:19,452 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:19,606 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:19,754 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:19,907 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:20,151 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:20,298 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:20,435 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:20,579 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:20,721 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:20,872 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:21,013 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:21,156 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:21,316 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:21,472 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:21,611 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:21,751 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:21,893 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:22,090 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:22,352 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:22,502 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:22,655 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:22,812 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:22,968 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:23,119 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:23,262 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:23,423 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:23,578 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:23,733 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:23,887 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:24,044 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:24,193 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:24,459 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:24,601 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:24,754 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:24,897 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:25,050 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:25,192 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:25,330 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:25,471 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:25,614 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:25,767 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:25,905 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:26,048 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:26,193 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:26,446 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:26,593 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:26,741 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:26,899 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:27,051 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:27,194 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:27,346 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:27,484 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:27,627 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:27,772 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:27,925 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:28,066 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:28,206 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:28,446 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:28,594 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:28,748 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:28,895 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:29,048 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:29,201 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:29,357 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:29,512 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:29,664 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:29,807 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:29,960 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:30,107 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:30,299 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:30,566 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:30,715 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:30,853 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:30,992 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:31,133 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:31,280 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:31,437 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:31,586 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:31,784 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:31,975 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:32,186 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:32,388 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:32,654 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:32,877 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:33,099 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:33,332 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:33,524 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:33,809 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:34,033 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:34,227 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:34,434 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:34,741 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:34,933 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:35,142 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:35,353 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:35,576 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:35,764 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:35,977 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:36,208 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:36,424 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:36,623 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:36,930 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:37,242 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:37,457 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:37,678 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:37,887 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:38,092 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:38,339 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:38,555 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:38,707 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:38,847 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:38,987 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:39,254 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:39,396 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:39,535 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:39,678 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:39,809 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:39,961 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:40,110 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:40,253 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:40,394 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:40,531 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:40,674 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:40,818 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:40,964 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:28:41,202 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:22,646 - behavior_detection - INFO - app:start_realtime_detection:423 - 📥 收到实时检测请求: source=camera, mode=realtime
+2025-06-30 10:30:22,650 - behavior_detection - INFO - app:start_realtime_detection:450 - 🔧 检测配置: {'device': 'cuda', 'confidence_threshold': 0.5, 'input_size': 640, 'alert_behaviors': ['fall down', 'fight', 'enter', 'exit']}
+2025-06-30 10:30:34,080 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:34,217 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:34,340 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:34,470 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:34,597 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:34,723 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:34,849 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:34,985 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:35,115 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:35,242 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:35,371 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:35,515 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:35,655 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:35,794 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:35,932 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:36,072 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:36,194 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:36,328 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:36,470 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:36,609 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:36,735 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:36,863 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:36,996 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:37,133 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:37,271 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:37,393 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:37,524 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:37,647 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:37,774 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:37,899 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:38,022 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:38,151 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:38,294 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:38,429 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:38,560 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:38,697 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:38,828 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:38,966 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:39,108 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:39,246 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:39,374 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:39,514 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:39,658 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:39,800 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:39,937 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:40,080 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:40,214 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:40,341 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:40,476 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:40,608 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:40,746 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:40,885 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:41,016 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:41,154 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:41,294 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:41,437 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:41,580 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:41,719 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:41,859 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:42,001 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:42,142 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:42,285 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:42,423 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:42,564 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:42,702 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:43,365 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:43,499 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:43,641 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:43,790 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:43,925 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:44,067 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:44,203 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:44,347 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:44,489 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:44,629 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:44,776 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:44,905 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:45,051 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:45,189 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:45,410 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:45,549 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:45,695 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:45,834 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:45,974 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:46,106 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:46,251 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:46,396 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:46,546 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:46,688 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:46,835 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:46,977 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:47,112 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:47,362 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:47,512 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:47,660 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:47,799 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:47,932 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:48,084 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:48,214 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:48,360 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:48,512 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:48,655 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:48,794 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:48,942 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:49,080 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:49,306 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:49,440 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:49,594 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:49,738 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:49,885 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:50,025 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:50,164 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:50,298 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:50,438 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:50,583 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:50,726 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:50,870 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:51,018 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:30:51,153 - behavior_detection - DEBUG - app:websocket_callback:460 - 📡 发送实时检测结果: detection
+2025-06-30 10:38:17,126 - behavior_detection - INFO - app:start_realtime_detection:423 - 📥 收到实时检测请求: source=camera, mode=realtime
+2025-06-30 10:38:17,149 - behavior_detection - INFO - app:start_realtime_detection:450 - 🔧 检测配置: {'device': 'cuda', 'confidence_threshold': 0.5, 'input_size': 640, 'alert_behaviors': ['fall down', 'fight', 'enter', 'exit']}
+2025-06-30 10:38:17,151 - behavior_detection - INFO - app:start_realtime_detection:451 - 🎮 CUDA可用: True
+2025-06-30 10:38:17,156 - behavior_detection - INFO - app:start_realtime_detection:453 - 🎮 CUDA设备数量: 1
+2025-06-30 10:38:17,171 - behavior_detection - INFO - app:start_realtime_detection:454 - 🎮 当前CUDA设备: 0
+2025-06-30 10:38:17,176 - behavior_detection - INFO - app:start_realtime_detection:455 - 🎮 设备名称: NVIDIA GeForce RTX 3070 Ti Laptop GPU
+2025-06-30 10:38:57,146 - behavior_detection - INFO - app:stop_realtime_detection:502 - ✅ 实时检测已停止
+2025-06-30 10:38:58,486 - behavior_detection - INFO - app:start_realtime_detection:423 - 📥 收到实时检测请求: source=camera, mode=realtime
+2025-06-30 10:38:58,487 - behavior_detection - INFO - app:start_realtime_detection:450 - 🔧 检测配置: {'device': 'cuda', 'confidence_threshold': 0.5, 'input_size': 640, 'alert_behaviors': ['fall down', 'fight', 'enter', 'exit']}
+2025-06-30 10:38:58,489 - behavior_detection - INFO - app:start_realtime_detection:451 - 🎮 CUDA可用: True
+2025-06-30 10:38:58,491 - behavior_detection - INFO - app:start_realtime_detection:453 - 🎮 CUDA设备数量: 1
+2025-06-30 10:38:58,493 - behavior_detection - INFO - app:start_realtime_detection:454 - 🎮 当前CUDA设备: 0
+2025-06-30 10:38:58,495 - behavior_detection - INFO - app:start_realtime_detection:455 - 🎮 设备名称: NVIDIA GeForce RTX 3070 Ti Laptop GPU
+2025-06-30 10:39:15,845 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:15,991 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:16,130 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:16,273 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:16,418 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:16,551 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:16,694 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:16,839 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:16,975 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:17,115 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:17,254 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:17,398 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:17,545 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:17,680 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:17,816 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:17,955 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:18,083 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:18,225 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:18,359 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:18,485 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:18,611 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:18,734 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:18,867 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:19,002 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:19,120 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:19,258 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:19,393 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:19,531 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:19,669 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:19,793 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:19,919 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:20,044 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:20,168 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:20,297 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:20,433 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:20,557 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:20,680 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:20,812 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:20,961 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:21,093 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:21,221 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:21,369 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:21,507 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:21,647 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:21,782 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:21,916 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:22,056 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:22,202 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:22,339 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:22,481 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:22,631 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:22,767 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:22,916 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:23,072 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:23,226 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:23,362 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:23,505 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:23,650 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:23,789 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:23,930 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:24,084 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:24,234 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:24,373 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:24,520 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:24,666 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:24,817 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:24,982 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:25,128 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:25,366 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:25,523 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:25,674 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:25,834 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:26,444 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:26,599 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:26,754 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:26,912 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:27,069 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:27,219 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:27,444 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:27,585 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:27,743 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:27,893 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:28,040 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:28,190 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:28,332 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:28,482 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:28,627 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:28,770 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:28,926 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:29,081 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:29,216 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:29,428 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:29,580 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:29,717 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:29,852 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:29,994 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:30,141 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:30,275 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:30,423 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:30,561 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:30,698 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:30,841 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:30,985 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:31,128 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:31,363 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:31,498 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:31,642 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:31,775 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:31,920 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:32,060 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:32,199 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:32,338 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:32,477 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:32,626 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:32,763 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:32,910 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:33,055 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:33,194 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:33,443 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:33,637 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:33,820 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:34,031 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:34,215 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:34,410 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:34,616 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:34,786 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:34,982 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:35,152 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:35,448 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:35,663 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:35,853 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:36,066 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:36,253 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:36,428 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:36,623 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:36,795 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:36,985 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:37,174 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:37,432 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:37,605 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:37,792 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:37,996 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:38,169 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:38,374 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:38,579 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:38,775 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:38,967 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:39,146 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:39,427 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:39,599 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:39,774 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:39,979 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:40,172 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:40,346 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:40,535 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:40,710 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:40,914 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:41,109 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:41,397 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:41,578 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:41,777 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:41,950 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:42,128 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:42,312 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:42,504 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:42,678 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:42,869 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:43,049 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:43,222 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:43,430 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:43,722 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:43,996 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:44,191 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:44,365 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:44,549 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:44,720 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:44,889 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:45,060 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:45,249 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:45,434 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:45,596 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:45,768 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:46,054 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:46,307 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:46,560 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:46,733 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:46,920 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:47,116 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:47,303 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:47,478 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:47,652 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:47,834 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:48,012 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:48,188 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:48,363 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:48,629 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:48,815 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:49,005 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:49,176 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:49,355 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:49,523 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:49,697 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:49,882 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:50,068 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:50,258 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:50,457 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:50,726 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:50,924 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:51,114 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:51,318 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:51,527 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:51,716 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:51,896 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:52,110 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:52,319 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:52,564 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:52,848 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:53,048 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:39:53,273 - behavior_detection - DEBUG - app:websocket_callback:465 - 📡 发送实时检测结果: detection
+2025-06-30 10:46:58,580 - behavior_detection - INFO - app:start_realtime_detection:423 - 📥 收到实时检测请求: source=camera, mode=realtime
+2025-06-30 10:46:58,591 - behavior_detection - INFO - app:start_realtime_detection:450 - 🔧 检测配置: {'device': 'cuda', 'confidence_threshold': 0.5, 'input_size': 640, 'alert_behaviors': ['fall down', 'fight', 'enter', 'exit']}
+2025-06-30 10:46:58,593 - behavior_detection - INFO - app:start_realtime_detection:451 - 🎮 CUDA可用: True
+2025-06-30 10:46:58,598 - behavior_detection - INFO - app:start_realtime_detection:453 - 🎮 CUDA设备数量: 1
+2025-06-30 10:46:58,615 - behavior_detection - INFO - app:start_realtime_detection:454 - 🎮 当前CUDA设备: 0
+2025-06-30 10:46:58,619 - behavior_detection - INFO - app:start_realtime_detection:455 - 🎮 设备名称: NVIDIA GeForce RTX 3070 Ti Laptop GPU
+2025-06-30 10:47:19,432 - behavior_detection - INFO - app:handle_connect:951 - WebSocket客户端连接: ee2d19a9-d137-4489-bdee-2244cd7562f2
+2025-06-30 10:49:27,437 - behavior_detection - INFO - app:stop_realtime_detection:502 - ✅ 实时检测已停止
+2025-06-30 10:49:27,474 - behavior_detection - INFO - app:handle_disconnect:957 - WebSocket客户端断开: ee2d19a9-d137-4489-bdee-2244cd7562f2
+2025-06-30 10:54:09,130 - behavior_detection - INFO - app:start_realtime_detection:423 - 📥 收到实时检测请求: source=camera, mode=realtime
+2025-06-30 10:54:09,135 - behavior_detection - INFO - app:start_realtime_detection:450 - 🔧 检测配置: {'device': 'cuda', 'confidence_threshold': 0.5, 'input_size': 640, 'alert_behaviors': ['fall down', 'fight', 'enter', 'exit']}
+2025-06-30 10:54:09,136 - behavior_detection - INFO - app:start_realtime_detection:451 - 🎮 CUDA可用: True
+2025-06-30 10:54:09,138 - behavior_detection - INFO - app:start_realtime_detection:453 - 🎮 CUDA设备数量: 1
+2025-06-30 10:54:09,147 - behavior_detection - INFO - app:start_realtime_detection:454 - 🎮 当前CUDA设备: 0
+2025-06-30 10:54:09,149 - behavior_detection - INFO - app:start_realtime_detection:455 - 🎮 设备名称: NVIDIA GeForce RTX 3070 Ti Laptop GPU
+2025-06-30 10:54:23,447 - behavior_detection - INFO - app:handle_connect:958 - WebSocket客户端连接: 4d2384cc-58e5-467b-9666-0a1bf0f00c5b
+2025-06-30 10:58:42,286 - behavior_detection - INFO - app:handle_disconnect:964 - WebSocket客户端断开: 4d2384cc-58e5-467b-9666-0a1bf0f00c5b
+2025-06-30 11:30:45,597 - behavior_detection - INFO - app:handle_connect:911 - WebSocket客户端连接: b15d7780-1d7b-4fde-b7a5-0a8e8e5d25c0
+2025-06-30 11:39:05,838 - behavior_detection - INFO - app:handle_disconnect:917 - WebSocket客户端断开: b15d7780-1d7b-4fde-b7a5-0a8e8e5d25c0
+2025-06-30 11:39:23,604 - behavior_detection - INFO - app:handle_connect:911 - WebSocket客户端连接: b1ba8d14-730f-4b06-a741-ea0b3f2613ea
+2025-06-30 11:40:33,541 - behavior_detection - INFO - app:upload_video:106 - 📥 收到视频上传请求
+2025-06-30 11:40:33,586 - behavior_detection - INFO - app:upload_video:107 - 📋 Form数据: {'confidence': '0.5', 'input_size': '640', 'device': 'cpu', 'output_format': 'both', 'alert_behaviors': '["fall down","fight","enter"]', 'save_results': 'true'}
+2025-06-30 11:40:33,587 - behavior_detection - INFO - app:upload_video:108 - 📁 文件列表: ['video']
+2025-06-30 11:40:33,597 - behavior_detection - INFO - app:upload_video:158 - 🔧 解析后的配置参数: {'confidence': 0.5, 'input_size': 640, 'device': 'cpu', 'output_format': 'both', 'alert_behaviors': ['fall down', 'fight', 'enter'], 'save_results': True}
+2025-06-30 11:40:33,617 - behavior_detection - INFO - app:upload_video:173 - ✅ 视频上传成功: fall.mp4, 任务ID: 1
+2025-06-30 11:40:33,629 - behavior_detection - INFO - app:start_video_detection:194 - 📥 收到检测请求: {'task_id': 1, 'config': {'confidence': 0.5, 'input_size': 640, 'device': 'cpu', 'output_format': 'both', 'alert_behaviors': ['fall down', 'fight', 'enter'], 'save_results': True}}
+2025-06-30 11:40:33,631 - behavior_detection - INFO - app:start_video_detection:199 - 🔧 检测配置参数: {'confidence': 0.5, 'input_size': 640, 'device': 'cpu', 'output_format': 'both', 'alert_behaviors': ['fall down', 'fight', 'enter'], 'save_results': True}
+2025-06-30 11:40:33,643 - behavior_detection - INFO - app:start_video_detection:230 - 🔄 更新任务配置: confidence=0.5, input_size=640, device=cpu
+2025-06-30 11:40:33,662 - behavior_detection - INFO - app:detection_worker:253 - 🚀 开始检测任务 1
+2025-06-30 11:40:33,665 - behavior_detection - INFO - app:detection_worker:254 - 📁 源文件: d:\PyCharm 2024.2.4\PycharmProjects\behavior_identify\backend\uploads\1751254833_fall.mp4
+2025-06-30 11:40:33,666 - behavior_detection - INFO - app:detection_worker:255 - 📁 输出文件: d:\PyCharm 2024.2.4\PycharmProjects\behavior_identify\backend\outputs\result_1_1751254833.mp4
+2025-06-30 11:40:33,667 - behavior_detection - INFO - app:detection_worker:256 - 🔧 检测参数: device=cpu, input_size=640, confidence=0.5
+2025-06-30 11:40:33,671 - behavior_detection - INFO - app:detection_worker:281 - 🔧 最终检测配置: {'device': 'cpu', 'input_size': 640, 'confidence_threshold': 0.5, 'alert_behaviors': ['fall down', 'fight', 'enter'], 'output_format': 'both', 'save_results': True}
+2025-06-30 11:41:23,645 - behavior_detection - INFO - app:handle_disconnect:917 - WebSocket客户端断开: b1ba8d14-730f-4b06-a741-ea0b3f2613ea
+2025-06-30 11:41:25,582 - behavior_detection - INFO - app:handle_connect:911 - WebSocket客户端连接: cc50a781-707f-4c54-9c40-ccab5a656d57
+2025-06-30 11:41:37,882 - behavior_detection - INFO - app:serve_output_file:798 - 请求静态文件: result_1_1751254833.mp4
+2025-06-30 11:41:37,883 - behavior_detection - INFO - app:serve_output_file:805 - 文件路径: d:\PyCharm 2024.2.4\PycharmProjects\behavior_identify\backend\outputs\result_1_1751254833.mp4
+2025-06-30 11:41:37,884 - behavior_detection - INFO - app:serve_output_file:806 - 当前工作目录: D:\PyCharm 2024.2.4\PycharmProjects\behavior_identify
+2025-06-30 11:41:37,885 - behavior_detection - INFO - app:serve_output_file:807 - outputs目录: d:\PyCharm 2024.2.4\PycharmProjects\behavior_identify\backend\outputs
+2025-06-30 11:41:37,886 - behavior_detection - INFO - app:serve_output_file:808 - 文件存在: True
+2025-06-30 11:41:37,887 - behavior_detection - INFO - app:serve_output_file:816 - 文件大小: 14383108 bytes
+2025-06-30 11:41:37,888 - behavior_detection - INFO - app:serve_output_file:821 - Range请求: bytes=0-
+2025-06-30 11:41:37,908 - behavior_detection - INFO - app:serve_output_file:853 - 返回Range响应: 0-14383107/14383108
+2025-06-30 11:41:38,147 - behavior_detection - INFO - app:serve_output_file:798 - 请求静态文件: result_1_1751254833.mp4
+2025-06-30 11:41:38,148 - behavior_detection - INFO - app:serve_output_file:805 - 文件路径: d:\PyCharm 2024.2.4\PycharmProjects\behavior_identify\backend\outputs\result_1_1751254833.mp4
+2025-06-30 11:41:38,149 - behavior_detection - INFO - app:serve_output_file:806 - 当前工作目录: D:\PyCharm 2024.2.4\PycharmProjects\behavior_identify
+2025-06-30 11:41:38,149 - behavior_detection - INFO - app:serve_output_file:807 - outputs目录: d:\PyCharm 2024.2.4\PycharmProjects\behavior_identify\backend\outputs
+2025-06-30 11:41:38,149 - behavior_detection - INFO - app:serve_output_file:808 - 文件存在: True
+2025-06-30 11:41:38,150 - behavior_detection - INFO - app:serve_output_file:816 - 文件大小: 14383108 bytes
+2025-06-30 11:41:38,150 - behavior_detection - INFO - app:serve_output_file:821 - Range请求: bytes=14352384-
+2025-06-30 11:41:38,151 - behavior_detection - INFO - app:serve_output_file:853 - 返回Range响应: 14352384-14383107/14383108
+2025-06-30 11:41:38,155 - behavior_detection - INFO - app:serve_output_file:798 - 请求静态文件: result_1_1751254833.mp4
+2025-06-30 11:41:38,156 - behavior_detection - INFO - app:serve_output_file:805 - 文件路径: d:\PyCharm 2024.2.4\PycharmProjects\behavior_identify\backend\outputs\result_1_1751254833.mp4
+2025-06-30 11:41:38,156 - behavior_detection - INFO - app:serve_output_file:806 - 当前工作目录: D:\PyCharm 2024.2.4\PycharmProjects\behavior_identify
+2025-06-30 11:41:38,156 - behavior_detection - INFO - app:serve_output_file:807 - outputs目录: d:\PyCharm 2024.2.4\PycharmProjects\behavior_identify\backend\outputs
+2025-06-30 11:41:38,157 - behavior_detection - INFO - app:serve_output_file:808 - 文件存在: True
+2025-06-30 11:41:38,157 - behavior_detection - INFO - app:serve_output_file:816 - 文件大小: 14383108 bytes
+2025-06-30 11:41:38,157 - behavior_detection - INFO - app:serve_output_file:821 - Range请求: bytes=32768-
+2025-06-30 11:41:38,164 - behavior_detection - INFO - app:serve_output_file:853 - 返回Range响应: 32768-14383107/14383108
+2025-06-30 11:41:38,275 - behavior_detection - INFO - app:serve_output_file:798 - 请求静态文件: result_1_1751254833.mp4
+2025-06-30 11:41:38,277 - behavior_detection - INFO - app:serve_output_file:805 - 文件路径: d:\PyCharm 2024.2.4\PycharmProjects\behavior_identify\backend\outputs\result_1_1751254833.mp4
+2025-06-30 11:41:38,278 - behavior_detection - INFO - app:serve_output_file:806 - 当前工作目录: D:\PyCharm 2024.2.4\PycharmProjects\behavior_identify
+2025-06-30 11:41:38,280 - behavior_detection - INFO - app:serve_output_file:807 - outputs目录: d:\PyCharm 2024.2.4\PycharmProjects\behavior_identify\backend\outputs
+2025-06-30 11:41:38,284 - behavior_detection - INFO - app:serve_output_file:808 - 文件存在: True
+2025-06-30 11:41:38,286 - behavior_detection - INFO - app:serve_output_file:816 - 文件大小: 14383108 bytes
+2025-06-30 11:41:38,287 - behavior_detection - INFO - app:serve_output_file:821 - Range请求: bytes=7241728-
+2025-06-30 11:41:38,294 - behavior_detection - INFO - app:serve_output_file:853 - 返回Range响应: 7241728-14383107/14383108
+2025-06-30 11:41:38,303 - behavior_detection - INFO - app:serve_output_file:798 - 请求静态文件: result_1_1751254833.mp4
+2025-06-30 11:41:38,305 - behavior_detection - INFO - app:serve_output_file:805 - 文件路径: d:\PyCharm 2024.2.4\PycharmProjects\behavior_identify\backend\outputs\result_1_1751254833.mp4
+2025-06-30 11:41:38,307 - behavior_detection - INFO - app:serve_output_file:806 - 当前工作目录: D:\PyCharm 2024.2.4\PycharmProjects\behavior_identify
+2025-06-30 11:41:38,308 - behavior_detection - INFO - app:serve_output_file:807 - outputs目录: d:\PyCharm 2024.2.4\PycharmProjects\behavior_identify\backend\outputs
+2025-06-30 11:41:38,309 - behavior_detection - INFO - app:serve_output_file:808 - 文件存在: True
+2025-06-30 11:41:38,311 - behavior_detection - INFO - app:serve_output_file:816 - 文件大小: 14383108 bytes
+2025-06-30 11:41:38,313 - behavior_detection - INFO - app:serve_output_file:872 - 普通文件请求
+2025-06-30 11:41:38,316 - behavior_detection - INFO - app:serve_output_file:895 - 返回普通文件响应
+2025-06-30 11:41:41,046 - behavior_detection - INFO - app:serve_output_file:798 - 请求静态文件: result_1_1751254833.mp4
+2025-06-30 11:41:41,048 - behavior_detection - INFO - app:serve_output_file:805 - 文件路径: d:\PyCharm 2024.2.4\PycharmProjects\behavior_identify\backend\outputs\result_1_1751254833.mp4
+2025-06-30 11:41:41,050 - behavior_detection - INFO - app:serve_output_file:806 - 当前工作目录: D:\PyCharm 2024.2.4\PycharmProjects\behavior_identify
+2025-06-30 11:41:41,052 - behavior_detection - INFO - app:serve_output_file:807 - outputs目录: d:\PyCharm 2024.2.4\PycharmProjects\behavior_identify\backend\outputs
+2025-06-30 11:41:41,055 - behavior_detection - INFO - app:serve_output_file:808 - 文件存在: True
+2025-06-30 11:41:41,056 - behavior_detection - INFO - app:serve_output_file:816 - 文件大小: 14383108 bytes
+2025-06-30 11:41:41,057 - behavior_detection - INFO - app:serve_output_file:821 - Range请求: bytes=8749056-
+2025-06-30 11:41:41,062 - behavior_detection - INFO - app:serve_output_file:853 - 返回Range响应: 8749056-14383107/14383108
+2025-06-30 11:42:10,582 - behavior_detection - INFO - app:handle_disconnect:917 - WebSocket客户端断开: cc50a781-707f-4c54-9c40-ccab5a656d57
+2025-06-30 11:42:12,589 - behavior_detection - INFO - app:handle_connect:911 - WebSocket客户端连接: 32e8a489-f931-4090-8d73-71e250d9d67a
+2025-06-30 11:47:40,744 - behavior_detection - INFO - app:upload_video:106 - 📥 收到视频上传请求
+2025-06-30 11:47:40,805 - behavior_detection - INFO - app:upload_video:107 - 📋 Form数据: {'confidence': '0.45', 'input_size': '640', 'device': 'cuda', 'output_format': 'both', 'alert_behaviors': '["stand"]', 'save_results': 'true'}
+2025-06-30 11:47:40,806 - behavior_detection - INFO - app:upload_video:108 - 📁 文件列表: ['video']
+2025-06-30 11:47:40,810 - behavior_detection - INFO - app:upload_video:158 - 🔧 解析后的配置参数: {'confidence': 0.45, 'input_size': 640, 'device': 'cuda', 'output_format': 'both', 'alert_behaviors': ['stand'], 'save_results': True}
+2025-06-30 11:47:40,822 - behavior_detection - INFO - app:upload_video:173 - ✅ 视频上传成功: fall.mp4, 任务ID: 2
+2025-06-30 11:47:40,832 - behavior_detection - INFO - app:start_video_detection:194 - 📥 收到检测请求: {'task_id': 2, 'config': {'confidence': 0.45, 'input_size': 640, 'device': 'cuda', 'output_format': 'both', 'alert_behaviors': ['stand'], 'save_results': True}}
+2025-06-30 11:47:40,833 - behavior_detection - INFO - app:start_video_detection:199 - 🔧 检测配置参数: {'confidence': 0.45, 'input_size': 640, 'device': 'cuda', 'output_format': 'both', 'alert_behaviors': ['stand'], 'save_results': True}
+2025-06-30 11:47:40,837 - behavior_detection - INFO - app:start_video_detection:230 - 🔄 更新任务配置: confidence=0.45, input_size=640, device=cuda
+2025-06-30 11:47:40,849 - behavior_detection - INFO - app:detection_worker:253 - 🚀 开始检测任务 2
+2025-06-30 11:47:40,851 - behavior_detection - INFO - app:detection_worker:254 - 📁 源文件: d:\PyCharm 2024.2.4\PycharmProjects\behavior_identify\backend\uploads\1751255260_fall.mp4
+2025-06-30 11:47:40,852 - behavior_detection - INFO - app:detection_worker:255 - 📁 输出文件: d:\PyCharm 2024.2.4\PycharmProjects\behavior_identify\backend\outputs\result_2_1751255260.mp4
+2025-06-30 11:47:40,852 - behavior_detection - INFO - app:detection_worker:256 - 🔧 检测参数: device=cuda, input_size=640, confidence=0.45
+2025-06-30 11:47:40,856 - behavior_detection - INFO - app:detection_worker:281 - 🔧 最终检测配置: {'device': 'cuda', 'input_size': 640, 'confidence_threshold': 0.45, 'alert_behaviors': ['stand'], 'output_format': 'both', 'save_results': True}
+2025-06-30 11:48:22,744 - behavior_detection - INFO - app:handle_disconnect:917 - WebSocket客户端断开: 32e8a489-f931-4090-8d73-71e250d9d67a
+2025-06-30 11:48:24,589 - behavior_detection - INFO - app:handle_connect:911 - WebSocket客户端连接: 71988a61-1fbb-4536-a012-f7ebdbe7fc49
+2025-06-30 11:59:48,264 - behavior_detection - INFO - app:handle_disconnect:917 - WebSocket客户端断开: 71988a61-1fbb-4536-a012-f7ebdbe7fc49
+2025-06-30 14:39:49,746 - behavior_detection - INFO - app:handle_connect:911 - WebSocket客户端连接: 8f0c39f2-7859-48cb-9da4-7e6762e4dd34
+2025-06-30 14:46:08,283 - behavior_detection - INFO - app:handle_disconnect:917 - WebSocket客户端断开: 8f0c39f2-7859-48cb-9da4-7e6762e4dd34
+2025-06-30 14:46:20,592 - behavior_detection - INFO - app:handle_connect:911 - WebSocket客户端连接: 5a984b18-06e3-4630-8afc-0628aa7c6661
+2025-06-30 14:47:03,555 - behavior_detection - INFO - app:serve_output_file:798 - 请求静态文件: result_2_1751255260.mp4
+2025-06-30 14:47:03,559 - behavior_detection - INFO - app:serve_output_file:805 - 文件路径: d:\PyCharm 2024.2.4\PycharmProjects\behavior_identify\backend\outputs\result_2_1751255260.mp4
+2025-06-30 14:47:03,563 - behavior_detection - INFO - app:serve_output_file:806 - 当前工作目录: D:\PyCharm 2024.2.4\PycharmProjects\behavior_identify
+2025-06-30 14:47:03,567 - behavior_detection - INFO - app:serve_output_file:807 - outputs目录: d:\PyCharm 2024.2.4\PycharmProjects\behavior_identify\backend\outputs
+2025-06-30 14:47:03,570 - behavior_detection - INFO - app:serve_output_file:808 - 文件存在: True
+2025-06-30 14:47:03,573 - behavior_detection - INFO - app:serve_output_file:816 - 文件大小: 14373544 bytes
+2025-06-30 14:47:03,574 - behavior_detection - INFO - app:serve_output_file:821 - Range请求: bytes=0-
+2025-06-30 14:47:03,599 - behavior_detection - INFO - app:serve_output_file:853 - 返回Range响应: 0-14373543/14373544
+2025-06-30 14:47:03,812 - behavior_detection - INFO - app:serve_output_file:798 - 请求静态文件: result_2_1751255260.mp4
+2025-06-30 14:47:03,814 - behavior_detection - INFO - app:serve_output_file:805 - 文件路径: d:\PyCharm 2024.2.4\PycharmProjects\behavior_identify\backend\outputs\result_2_1751255260.mp4
+2025-06-30 14:47:03,816 - behavior_detection - INFO - app:serve_output_file:806 - 当前工作目录: D:\PyCharm 2024.2.4\PycharmProjects\behavior_identify
+2025-06-30 14:47:03,817 - behavior_detection - INFO - app:serve_output_file:807 - outputs目录: d:\PyCharm 2024.2.4\PycharmProjects\behavior_identify\backend\outputs
+2025-06-30 14:47:03,817 - behavior_detection - INFO - app:serve_output_file:808 - 文件存在: True
+2025-06-30 14:47:03,818 - behavior_detection - INFO - app:serve_output_file:816 - 文件大小: 14373544 bytes
+2025-06-30 14:47:03,819 - behavior_detection - INFO - app:serve_output_file:821 - Range请求: bytes=14352384-
+2025-06-30 14:47:03,821 - behavior_detection - INFO - app:serve_output_file:853 - 返回Range响应: 14352384-14373543/14373544
+2025-06-30 14:47:03,828 - behavior_detection - INFO - app:serve_output_file:798 - 请求静态文件: result_2_1751255260.mp4
+2025-06-30 14:47:03,831 - behavior_detection - INFO - app:serve_output_file:805 - 文件路径: d:\PyCharm 2024.2.4\PycharmProjects\behavior_identify\backend\outputs\result_2_1751255260.mp4
+2025-06-30 14:47:03,833 - behavior_detection - INFO - app:serve_output_file:806 - 当前工作目录: D:\PyCharm 2024.2.4\PycharmProjects\behavior_identify
+2025-06-30 14:47:03,834 - behavior_detection - INFO - app:serve_output_file:807 - outputs目录: d:\PyCharm 2024.2.4\PycharmProjects\behavior_identify\backend\outputs
+2025-06-30 14:47:03,835 - behavior_detection - INFO - app:serve_output_file:808 - 文件存在: True
+2025-06-30 14:47:03,836 - behavior_detection - INFO - app:serve_output_file:816 - 文件大小: 14373544 bytes
+2025-06-30 14:47:03,838 - behavior_detection - INFO - app:serve_output_file:872 - 普通文件请求
+2025-06-30 14:47:03,841 - behavior_detection - INFO - app:serve_output_file:895 - 返回普通文件响应
+2025-06-30 14:47:03,847 - behavior_detection - INFO - app:serve_output_file:798 - 请求静态文件: result_2_1751255260.mp4
+2025-06-30 14:47:03,848 - behavior_detection - INFO - app:serve_output_file:805 - 文件路径: d:\PyCharm 2024.2.4\PycharmProjects\behavior_identify\backend\outputs\result_2_1751255260.mp4
+2025-06-30 14:47:03,851 - behavior_detection - INFO - app:serve_output_file:806 - 当前工作目录: D:\PyCharm 2024.2.4\PycharmProjects\behavior_identify
+2025-06-30 14:47:03,852 - behavior_detection - INFO - app:serve_output_file:807 - outputs目录: d:\PyCharm 2024.2.4\PycharmProjects\behavior_identify\backend\outputs
+2025-06-30 14:47:03,853 - behavior_detection - INFO - app:serve_output_file:808 - 文件存在: True
+2025-06-30 14:47:03,855 - behavior_detection - INFO - app:serve_output_file:816 - 文件大小: 14373544 bytes
+2025-06-30 14:47:03,857 - behavior_detection - INFO - app:serve_output_file:821 - Range请求: bytes=65536-
+2025-06-30 14:47:03,871 - behavior_detection - INFO - app:serve_output_file:853 - 返回Range响应: 65536-14373543/14373544
+2025-06-30 14:52:12,056 - behavior_detection - INFO - app:upload_video:106 - 📥 收到视频上传请求
+2025-06-30 14:52:12,150 - behavior_detection - INFO - app:upload_video:107 - 📋 Form数据: {'confidence': '0.5', 'input_size': '640', 'device': 'cpu', 'output_format': 'both', 'alert_behaviors': '["fall down","fight","enter"]', 'save_results': 'true'}
+2025-06-30 14:52:12,153 - behavior_detection - INFO - app:upload_video:108 - 📁 文件列表: ['video']
+2025-06-30 14:52:12,168 - behavior_detection - INFO - app:upload_video:158 - 🔧 解析后的配置参数: {'confidence': 0.5, 'input_size': 640, 'device': 'cpu', 'output_format': 'both', 'alert_behaviors': ['fall down', 'fight', 'enter'], 'save_results': True}
+2025-06-30 14:52:12,194 - behavior_detection - INFO - app:upload_video:173 - ✅ 视频上传成功: fall.mp4, 任务ID: 3
+2025-06-30 14:52:12,230 - behavior_detection - INFO - app:start_video_detection:194 - 📥 收到检测请求: {'task_id': 3, 'config': {'confidence': 0.5, 'input_size': 640, 'device': 'cpu', 'output_format': 'both', 'alert_behaviors': ['fall down', 'fight', 'enter'], 'save_results': True}}
+2025-06-30 14:52:12,231 - behavior_detection - INFO - app:start_video_detection:199 - 🔧 检测配置参数: {'confidence': 0.5, 'input_size': 640, 'device': 'cpu', 'output_format': 'both', 'alert_behaviors': ['fall down', 'fight', 'enter'], 'save_results': True}
+2025-06-30 14:52:12,244 - behavior_detection - INFO - app:start_video_detection:230 - 🔄 更新任务配置: confidence=0.5, input_size=640, device=cpu
+2025-06-30 14:52:12,275 - behavior_detection - INFO - app:detection_worker:253 - 🚀 开始检测任务 3
+2025-06-30 14:52:12,281 - behavior_detection - INFO - app:detection_worker:254 - 📁 源文件: d:\PyCharm 2024.2.4\PycharmProjects\behavior_identify\backend\uploads\1751266332_fall.mp4
+2025-06-30 14:52:12,284 - behavior_detection - INFO - app:detection_worker:255 - 📁 输出文件: d:\PyCharm 2024.2.4\PycharmProjects\behavior_identify\backend\outputs\result_3_1751266332.mp4
+2025-06-30 14:52:12,290 - behavior_detection - INFO - app:detection_worker:256 - 🔧 检测参数: device=cpu, input_size=640, confidence=0.5
+2025-06-30 14:52:12,301 - behavior_detection - INFO - app:detection_worker:281 - 🔧 最终检测配置: {'device': 'cpu', 'input_size': 640, 'confidence_threshold': 0.5, 'alert_behaviors': ['fall down', 'fight', 'enter'], 'output_format': 'both', 'save_results': True}
+2025-06-30 14:52:55,741 - behavior_detection - INFO - app:handle_disconnect:917 - WebSocket客户端断开: 5a984b18-06e3-4630-8afc-0628aa7c6661
+2025-06-30 14:52:58,869 - behavior_detection - INFO - app:handle_connect:911 - WebSocket客户端连接: bf4edfb8-c6f4-4981-95d2-3727c99166b8
+2025-06-30 14:53:43,881 - behavior_detection - INFO - app:handle_disconnect:917 - WebSocket客户端断开: bf4edfb8-c6f4-4981-95d2-3727c99166b8
+2025-06-30 14:53:46,864 - behavior_detection - INFO - app:handle_connect:911 - WebSocket客户端连接: e322e80d-d9af-405f-b30d-df42a1f46c8f
+2025-06-30 14:54:31,873 - behavior_detection - INFO - app:handle_disconnect:917 - WebSocket客户端断开: e322e80d-d9af-405f-b30d-df42a1f46c8f
+2025-06-30 14:54:33,575 - behavior_detection - INFO - app:handle_connect:911 - WebSocket客户端连接: d96c7139-1671-4664-8c74-58c8c39ed49f
+2025-06-30 15:00:08,277 - behavior_detection - INFO - app:handle_disconnect:917 - WebSocket客户端断开: d96c7139-1671-4664-8c74-58c8c39ed49f

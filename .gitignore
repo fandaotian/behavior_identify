@@ -1,0 +1,38 @@
+# Environments
+venv/
+/backend/venv/
+.env
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Instance and logs
+instance/
+logs/
+*.log
+
+# Database
+*.db
+*.sqlite3
+
+# IDEs and editors
+.idea/
+.vscode/
+*.swp
+
+# macOS
+.DS_Store
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+/npm-debug.log*
+/yarn-debug.log*
+/yarn-error.log*
+
+# Model files
+*.pt
+*.pyth 

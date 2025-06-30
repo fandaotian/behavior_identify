@@ -77,15 +77,25 @@
             <div v-if="!isMonitoring" class="no-monitor">
               <el-icon size="64"><VideoCamera /></el-icon>
               <p>暂无实时监控</p>
-              <el-button type="primary" @click="startMonitoring">开始监控</el-button>
+              <el-button type="primary" @click="handleStartMonitoring" :loading="startingCamera">{{ startingCamera ? '启动中...' : '开始监控' }}</el-button>
             </div>
             
+            <div v-else-if="cameraError" class="video-error">
+              <el-icon size="64"><Warning /></el-icon>
+              <p>摄像头访问失败</p>
+              <p class="error-message">{{ cameraError }}</p>
+              <el-button type="primary" @click="handleStartMonitoring">
+                重试
+              </el-button>
+            </div>
+
             <div v-else class="monitor-active">
               <video 
                 ref="videoPreview" 
                 class="video-preview" 
                 autoplay 
                 muted
+                playsinline
                 @loadedmetadata="onVideoLoaded"
               />
               <div class="monitor-overlay">
@@ -93,6 +103,9 @@
                   <span class="status-indicator online"></span>
                   <span>监控中 - {{ currentFPS }} FPS</span>
                 </div>
+                <el-button type="danger" size="small" @click="handleStopMonitoring" circle>
+                  <el-icon><VideoPause /></el-icon>
+                </el-button>
               </div>
             </div>
           </div>
@@ -161,14 +174,15 @@
 </template>
 
 <script>
-import { ref, reactive, onMounted, onUnmounted } from 'vue'
+import { ref, reactive, onMounted, onUnmounted, toRefs } from 'vue'
 import { ElMessage } from 'element-plus'
-import { VideoCamera, Warning, DataAnalysis, Clock, Check } from '@element-plus/icons-vue'
+import { VideoCamera, Warning, DataAnalysis, Clock, Check, VideoPause } from '@element-plus/icons-vue'
+import { useRealtimeMonitor } from '@/composables/useRealtimeMonitor'
 
 export default {
   name: 'Dashboard',
   components: {
-    VideoCamera, Warning, DataAnalysis, Clock, Check
+    VideoCamera, Warning, DataAnalysis, Clock, Check, VideoPause
   },
   setup() {
     const stats = reactive({
@@ -178,10 +192,12 @@ export default {
     })
     
     const systemUptime = ref('0天0小时')
-    const isMonitoring = ref(false)
     const currentFPS = ref(0)
     const recentAlerts = ref([])
     const videoPreview = ref(null)
+
+    // 从 composable 获取监控逻辑
+    const { isMonitoring, startingCamera, cameraError, startMonitoring, stopMonitoring } = useRealtimeMonitor(videoPreview);
     
     let updateTimer = null
     let websocket = null
@@ -225,32 +241,24 @@ export default {
       }
     }
 
-    // 开始监控
-    const startMonitoring = async () => {
-      try {
-        const response = await fetch('/api/detect/realtime', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({
-            source: 'camera',
-            preview: true
-          })
-        })
-        
-        if (response.ok) {
-          isMonitoring.value = true
-          ElMessage.success('监控已启动')
-          connectWebSocket()
-        } else {
-          ElMessage.error('启动监控失败')
-        }
-      } catch (error) {
-        ElMessage.error('启动监控失败')
-        console.error('启动监控错误:', error)
+    // 封装开始监控操作
+    const handleStartMonitoring = async () => {
+      await startMonitoring();
+      if (isMonitoring.value) {
+        ElMessage.success('监控已启动');
+        connectWebSocket();
       }
-    }
+    };
+
+    // 封装停止监控操作
+    const handleStopMonitoring = async () => {
+      await stopMonitoring();
+      if (websocket) {
+        websocket.close();
+        websocket = null;
+      }
+      ElMessage.info('监控已停止');
+    };
 
     // WebSocket连接
     const connectWebSocket = () => {
@@ -327,10 +335,13 @@ export default {
       stats,
       systemUptime,
       isMonitoring,
+      startingCamera,
+      cameraError,
       currentFPS,
       recentAlerts,
       videoPreview,
-      startMonitoring,
+      handleStartMonitoring,
+      handleStopMonitoring,
       formatTime,
       onVideoLoaded
     }
@@ -570,5 +581,25 @@ export default {
 
 .chart-container::before {
   content: "图表加载中...";
+}
+
+.video-error {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #f56c6c;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.error-message {
+  font-size: 14px;
+  color: #909399;
+  margin: 8px 0 16px 0;
+  text-align: center;
+  max-width: 300px;
+  line-height: 1.5;
 }
 </style> 

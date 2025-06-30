@@ -42,3 +42,21 @@ with app.app_context(). See the documentation for more information.
 2025-06-28 16:50:29,902 - behavior_detection - INFO - app:serve_output_file:728 - 返回Range响应: 4620288-4621757/4621758
 2025-06-28 16:51:17,376 - behavior_detection - INFO - app:delete_task:552 - 删除源文件: D:\PyCharm 2024.2.4\PycharmProjects\behavior_identify\backend\uploads\1751095944_fall.mp4
 2025-06-28 16:51:19,503 - behavior_detection - INFO - app:delete_task:552 - 删除源文件: D:\PyCharm 2024.2.4\PycharmProjects\behavior_identify\backend\uploads\1751096576_fall.mp4
+2025-06-30 10:58:55,586 - behavior_detection - INFO - app:handle_connect:958 - WebSocket客户端连接: 185330fa-680a-46ee-a32e-27fff77eeadb
+2025-06-30 10:58:59,949 - behavior_detection - INFO - app:handle_disconnect:964 - WebSocket客户端断开: 185330fa-680a-46ee-a32e-27fff77eeadb
+2025-06-30 10:59:04,139 - behavior_detection - INFO - app:start_realtime_detection:423 - 📥 收到实时检测请求: source=camera, mode=realtime
+2025-06-30 10:59:04,147 - behavior_detection - INFO - app:start_realtime_detection:450 - 🔧 检测配置: {'device': 'cuda', 'confidence_threshold': 0.5, 'input_size': 640, 'alert_behaviors': ['fall down', 'fight', 'enter', 'exit']}
+2025-06-30 10:59:04,148 - behavior_detection - INFO - app:start_realtime_detection:451 - 🎮 CUDA可用: True
+2025-06-30 10:59:04,150 - behavior_detection - INFO - app:start_realtime_detection:453 - 🎮 CUDA设备数量: 1
+2025-06-30 10:59:04,163 - behavior_detection - INFO - app:start_realtime_detection:454 - 🎮 当前CUDA设备: 0
+2025-06-30 10:59:04,167 - behavior_detection - INFO - app:start_realtime_detection:455 - 🎮 设备名称: NVIDIA GeForce RTX 3070 Ti Laptop GPU
+2025-06-30 10:59:16,170 - behavior_detection - INFO - app:handle_connect:958 - WebSocket客户端连接: 53a401b1-fb13-44c1-9bb2-82ca835ffd82
+2025-06-30 11:00:21,367 - behavior_detection - INFO - app:stop_realtime_detection:509 - ✅ 实时检测已停止
+2025-06-30 11:00:21,396 - behavior_detection - INFO - app:handle_disconnect:964 - WebSocket客户端断开: 53a401b1-fb13-44c1-9bb2-82ca835ffd82
+2025-06-30 11:02:10,383 - behavior_detection - INFO - app:start_realtime_detection:423 - 📥 收到实时检测请求: source=camera, mode=realtime
+2025-06-30 11:02:10,385 - behavior_detection - INFO - app:start_realtime_detection:450 - 🔧 检测配置: {'device': 'cuda', 'confidence_threshold': 0.5, 'input_size': 640, 'alert_behaviors': ['fall down', 'fight', 'enter', 'exit']}
+2025-06-30 11:02:10,387 - behavior_detection - INFO - app:start_realtime_detection:451 - 🎮 CUDA可用: True
+2025-06-30 11:02:10,389 - behavior_detection - INFO - app:start_realtime_detection:453 - 🎮 CUDA设备数量: 1
+2025-06-30 11:02:10,390 - behavior_detection - INFO - app:start_realtime_detection:454 - 🎮 当前CUDA设备: 0
+2025-06-30 11:02:10,392 - behavior_detection - INFO - app:start_realtime_detection:455 - 🎮 设备名称: NVIDIA GeForce RTX 3070 Ti Laptop GPU
+2025-06-30 11:02:22,320 - behavior_detection - INFO - app:handle_connect:958 - WebSocket客户端连接: 6fcd53bb-5b66-4b5b-9647-1cd34aa76cd7

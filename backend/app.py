@@ -51,11 +51,11 @@ def create_app(config_name='development'):
     CORS(app)
     
     # 初始化SocketIO
-    socketio = SocketIO(app, 
-                       cors_allowed_origins="*", 
-                       async_mode='eventlet',
-                       logger=True, 
-                       engineio_logger=True)
+    socketio = SocketIO(app,
+                        async_mode=app.config.get('SOCKETIO_ASYNC_MODE'),
+                        cors_allowed_origins=app.config.get('SOCKETIO_CORS_ALLOWED_ORIGINS'),
+                        logger=False, 
+                        engineio_logger=False)
     
     # 设置日志
     logger = setup_logger(app.config['LOG_FILE'], app.config['LOG_LEVEL'])
